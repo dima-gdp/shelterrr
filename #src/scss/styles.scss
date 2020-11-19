@@ -191,32 +191,38 @@
 }
 
 //find =============================================================================================
-.bal {
+.bln {
 	box-sizing: border-box;
 	width: 311px;
-	height: 170px;
-	padding: 40px 20px 20px 20px;
+	height: 177px;
+
 	background: url("../img/point-map.svg") 0 0 / contain no-repeat;
+	text-align: center;
+
+	&__inner {
+		height: 100%;
+		padding: 35px 20px 45px 20px;
+		position: relative;
+	}
+
+	&__close {
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		top: 7px;
+		right: 7px;
+	}
+
+	&__text {
+		color: #ffffff;
+		font-family: "Montserrat";
+		font-size: 20px;
+		letter-spacing: 0.5px;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
 }
-
-// 	background: url("../img/point-map.svg") 0 0 / contain no-repeat;
-// }
-// .ymaps-2-1-77-balloon__tail:after {
-// 	background-color: #0f3057 !important;
-// }
-
-// .ymaps-2-1-77-balloon__content {
-// 	width: 304px !important;
-// 	height: 141px !important;
-// 	text-align: center !important;
-// 	color: #ffffff;
-// 	font-family: "Montserrat" !important;
-// 	font-size: 20px !important;
-// 	letter-spacing: 0.5px !important;
-// 	background-color: #0f3057 !important;
-// 	border-radius: 20px !important;
-// 	overflow: hidden !important;
-// }
 
 .find {
 	// .find__container
@@ -258,6 +264,7 @@
 	// .tabs__item
 	&__item {
 		padding: 12px 36px;
+		cursor: pointer;
 		&:not(:last-child) {
 			margin-right: 27px;
 		}
@@ -274,8 +281,6 @@
 	// .tabs__block
 	&__block {
 		display: none;
-		position: relative;
-
 		&.active {
 			display: block;
 		}
@@ -284,18 +289,34 @@
 .slider-tabs {
 	// .slider-tabs__item
 	&__item {
+		display: flex;
+		flex-direction: column;
 		padding-bottom: 40px;
 		border-radius: 20px;
 		background-color: #fff;
 		overflow: hidden;
 		transition: box-shadow 0.3s;
+		height: auto;
 	}
 	// .slider-tabs__photo
 	&__photo {
 		margin-bottom: 24px;
+		position: relative;
+		padding-bottom: 116.5%;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: center;
+			object-position: center;
+			font-family: "object-fit: cover; object-position: center;";
+		}
 	}
 	// .slider-tabs__name
 	&__name {
+		flex: 1 1 auto;
 		padding: 0px 15px 0px 47px;
 		margin-bottom: 20px;
 		color: #000000;
@@ -330,8 +351,12 @@
 }
 
 .slider-1 {
-	margin: 0 -30px;
-	padding: 40px 30px;
+	position: relative;
+
+	&__container {
+		margin: 0 -30px;
+		padding: 40px 30px;
+	}
 
 	.swiper-slide-active {
 		box-shadow: 5px 6px 36px rgba(53, 139, 238, 0.7);
@@ -340,26 +365,26 @@
 	.swiper-button-disabled {
 		opacity: 0.7;
 	}
-}
 
-.slider-1-btn {
-	width: 83px;
-	height: 83px;
-	position: absolute;
-	top: 50%;
-	border-radius: 50%;
-	background: #358bee url("../svg/arrow-slider.svg") 45% 50% no-repeat;
-	z-index: 2;
-}
+	&__btn {
+		width: 83px;
+		height: 83px;
+		position: absolute;
+		top: 50%;
+		border-radius: 50%;
+		background: #358bee url("../svg/arrow-slider.svg") 45% 50% no-repeat;
+		z-index: 2;
+	}
 
-.slider-1-next {
-	right: 0px;
-	transform: translate(50%, -50%) rotate(180deg);
-}
+	&__next {
+		right: 0px;
+		transform: translate(50%, -50%) rotate(180deg);
+	}
 
-.slider-1-prev {
-	left: 0;
-	transform: translate(-50%, -50%);
+	&__prev {
+		left: 0;
+		transform: translate(-50%, -50%);
+	}
 }
 
 //about =============================================================================================
@@ -580,13 +605,30 @@
 	}
 }
 .comment {
+	display: flex;
+	flex-direction: column;
 	padding: 61px 63px 65px 63px;
 	border-radius: 20px;
 	background-color: #ffffff;
 	transition: box-shadow 0.3s;
+	height: auto;
 	// .comment__image
 	&__image {
 		margin-bottom: 40px;
+		position: relative;
+		padding-bottom: 63.7%;
+		border-radius: 20px 20px 0 0;
+		overflow: hidden;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: center;
+			object-position: center;
+			font-family: "object-fit: cover; object-position: center;";
+		}
 	}
 	// .comment__name
 	&__name {
@@ -600,6 +642,7 @@
 		margin-bottom: 15px;
 		color: #000000;
 		font-size: 20px;
+		flex: 1 1 auto;
 	}
 	// .comment__time
 	&__time {
