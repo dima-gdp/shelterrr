@@ -1,6 +1,9 @@
 $(document).ready(function () {
+
 	objectFitImages();
 
+	const mobMenu = $('.mob-menu')
+	const burger = $('.header__burger')
 	const slidersTabs = document.querySelectorAll('.slider-1__container')
 
 	slidersTabs.forEach(function (el) {
@@ -188,29 +191,37 @@ $(document).ready(function () {
 		myMap.geoObjects.add(myPlacemark);
 	}
 
+	burger.click(function () {
+		mobMenu.addClass('active')
+	})
+
+	$('.mob-menu__close').click(function () {
+		mobMenu.removeClass('active')
+	})
+
+	$(document).click(function (ev) {
+
+		if (!ev.target.closest('.header__burger')) {
+
+			if (!ev.target.closest('.mob-menu')) {
+				mobMenu.removeClass('active')
+			}
+
+		}
+	})
 
 
+	$("#to-modal").on('click', function () {
 
-	// function init() {
-	// 	// Создание карты.
-	// 	var myMap = new ymaps.Map("map", {
-	// 		center: [43.1420542527047, 131.91734209167475],
-	// 		zoom: 14,
-	// 	});
+		$.fancybox.open({
+			src: '#modal',
+			touch: 'false',
+			smallBtn: false,
+			buttons: '',
+		});
 
-	// 	var point = new ymaps.GeoObject({
-	// 		geometry: {
-	// 			type: "Point", // тип геометрии - точка
-	// 			coordinates: [43.1420542527047, 131.91734209167475], // координаты точки
-	// 		}
-	// 	},
-	// 		{
-	// 			iconLayout: 'default#imageWithContent',
-	// 			iconImageHref: '../img/point-map.svg',
-	// 			iconImageSize: [311, 170],
-	// 		}
-	// 	);
+	});
 
-	// 	myMap.geoObjects.add(point);
-	// }
+	$('.modal-tel').inputmask({ "mask": "+7 (999)-999-99-99" });
+
 });

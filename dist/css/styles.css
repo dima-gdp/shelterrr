@@ -188,7 +188,7 @@ body {
 
 @media (min-width: 992px) {
   .burger:hover.burger span {
-    background-color: #efc58b;
+    background-color: #358bee;
   }
 }
 
@@ -236,6 +236,282 @@ body {
   bottom: calc(50% - 1px);
 }
 
+.modal {
+  max-width: 570px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  background-color: transparent;
+}
+
+.modal__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  background-color: #c6defa;
+  border-radius: 26px;
+}
+
+.modal__close {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 15px;
+  right: 12px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .modal__close:hover.modal__close::after, .modal__close:hover.modal__close::before {
+    background-color: #358bee;
+  }
+}
+
+.modal__close::before, .modal__close::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.modal__close::before {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.modal__close::after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.modal__image {
+  width: 100%;
+  max-width: 170px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  height: auto;
+}
+
+.modal__content {
+  padding: 30px 35px 30px 25px;
+}
+
+.modal__title {
+  margin-bottom: 10px;
+  padding-bottom: 18px;
+  padding-left: 27px;
+  font-size: 24px;
+  position: relative;
+}
+
+.modal__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -9px;
+  width: 7px;
+  height: 45px;
+  background-color: #0f3057;
+}
+
+.modal__subtitle {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.modal__form {
+  margin-bottom: 28px;
+}
+
+.modal__input {
+  min-height: 51px;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #545a65;
+  font-size: 16px;
+  padding: 5px 20px;
+}
+
+.modal__input:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+.modal__btn {
+  width: 100%;
+  min-height: 52px !important;
+}
+
+.modal__privacy {
+  font-size: 12px;
+  color: #5e6675;
+  width: 100%;
+  text-align: left;
+  padding-left: 34px;
+  background-size: 22px auto;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  min-height: 23px;
+}
+
+.modal__privacy span {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #5e6675;
+}
+
+.mob-menu {
+  position: fixed;
+  right: -150%;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 50px 15px 30px 15px;
+  border-radius: 20px 0 0 20px;
+  z-index: 888;
+  background: #f5ccb8;
+  width: 320px;
+  height: 100%;
+  overflow: auto;
+  -webkit-box-shadow: 0 0 7px #9e9e9e4d;
+          box-shadow: 0 0 7px #9e9e9e4d;
+  -webkit-transition: right 0.4s, visibility 0.4s;
+  -o-transition: right 0.4s, visibility 0.4s;
+  transition: right 0.4s, visibility 0.4s;
+}
+
+.mob-menu.active {
+  visibility: visible;
+  right: 0;
+}
+
+.mob-menu__close {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .mob-menu__close:hover.mob-menu__close::after, .mob-menu__close:hover.mob-menu__close::before {
+    background-color: #358bee;
+  }
+}
+
+.mob-menu__close::before, .mob-menu__close::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.mob-menu__close::before {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.mob-menu__close::after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.mob-menu__title {
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.mob-menu__nav {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.mob-menu__tel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 220px;
+  height: 45px;
+  padding: 10px;
+  -webkit-box-shadow: 5px 6px 36px rgba(197, 139, 111, 0.44);
+          box-shadow: 5px 6px 36px rgba(197, 139, 111, 0.44);
+  border-radius: 28px;
+  background-color: #ffffff;
+  color: #0f3057;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.nav-mob__top {
+  margin-bottom: 40px;
+}
+
+.top-nav-mob__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.top-nav-mob__link {
+  color: #358bee;
+  font-size: 16px;
+}
+
+.bot-nav-mob__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.bot-nav-mob__link {
+  color: #0f3057;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.bot-nav-mob__link--active {
+  color: #358bee;
+}
+
 .header {
   padding: 16px 0;
   background-color: #f5ccb8;
@@ -270,8 +546,9 @@ body {
           align-items: center;
   width: 242px;
   height: 56px;
-  -webkit-box-shadow: 5px 6px 40px rgba(197, 139, 111, 0.44);
-          box-shadow: 5px 6px 40px rgba(197, 139, 111, 0.44);
+  padding: 10px;
+  -webkit-box-shadow: 5px 6px 36px rgba(197, 139, 111, 0.44);
+          box-shadow: 5px 6px 36px rgba(197, 139, 111, 0.44);
   border-radius: 28px;
   background-color: #ffffff;
   color: #0f3057;
@@ -323,10 +600,9 @@ body {
 }
 
 .hero {
-  display: none;
   background: #f5ccb8;
   position: relative;
-  min-height: calc(100vh - 114.5px);
+  min-height: calc(100vh - 111.4px);
 }
 
 .hero::after {
@@ -342,6 +618,7 @@ body {
 
 .hero__container {
   padding-top: 117px;
+  padding-bottom: 50px;
   position: relative;
   z-index: 5;
 }
@@ -372,13 +649,17 @@ body {
   display: flex;
 }
 
-.hero__btn {
-  padding-left: 49px;
-  padding-right: 49px;
+.hero__btn:first-child {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 320px;
+          flex: 0 1 320px;
+  margin-right: 30px;
 }
 
-.hero__btn:not(:last-child) {
-  margin-right: 30px;
+.hero__btn:last-child {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 270px;
+          flex: 0 1 270px;
 }
 
 .hero__image {
@@ -665,10 +946,30 @@ body {
   padding-top: 81px;
 }
 
+.about__grid {
+  max-width: 1298px;
+  padding-left: 83px;
+}
+
 .about__dog {
   position: absolute;
   top: 0;
   right: 15px;
+  width: 46.53%;
+  padding-bottom: 73.05%;
+}
+
+.about__dog img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  font-family: "object-fit: cover; object-position: center;";
 }
 
 .about__img-text {
@@ -703,7 +1004,7 @@ body {
 
 .grid-about {
   display: grid;
-  grid-template-columns: repeat(4, minmax(163px, 291px));
+  grid-template-columns: repeat(auto-fit, minmax(254px, auto));
   grid-gap: 60px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -755,6 +1056,7 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 57.5%;
           flex: 0 1 57.5%;
+  max-height: 682px;
   background: url("../img/donate-dog.png") center center/cover no-repeat;
 }
 
@@ -1062,6 +1364,9 @@ body {
   .header__nav {
     padding: 0px 40px 0px 20px;
   }
+  .bot-nav__link {
+    font-size: 13px;
+  }
   .nav-header__top {
     padding-bottom: 12px;
   }
@@ -1148,6 +1453,9 @@ body {
     margin: 0px 0px 20px 0px;
     padding: 0;
   }
+  .modal__image {
+    display: none;
+  }
 }
 
 @media (max-width: 500px) {
@@ -1156,5 +1464,15 @@ body {
         -ms-flex-order: 2;
             order: 2;
     width: 280px;
+  }
+  .modal__content {
+    padding: 50px 35px 30px 25px;
+  }
+  .modal__title {
+    font-size: 20px;
+    padding-left: 15px;
+  }
+  .modal__title::after {
+    height: 40px;
   }
 }

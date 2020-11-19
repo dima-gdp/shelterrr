@@ -7,12 +7,65 @@
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=394d86c9-b02e-4b1a-9c51-71b3a3a770ee&lang=ru_RU">
 	</script>
 	<link rel="stylesheet" href="libs/swiper.min.css">
+	<link rel="stylesheet" href="libs/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="css/styles.css">
 	<title>Document</title>
 </head>
 
 <body>
 	<div class="wrapper">
+		<div id="modal" class="modal">
+			<div class="modal__container">
+				<button class="modal__close"></button>
+				<div class="modal__image" style="background-image: url('img/about-dog.png');"></div>
+				<div class="modal__content">
+					<div class="modal__title title">Заказать звонок</div>
+					<p class="modal__subtitle">Просто заполните контактную форму, наш специалист свяжется с Вами в ближайшее
+						время.</p>
+					<form class="modal__form">
+						<input type="text" class="modal__input" placeholder="Ваше имя">
+						<input type="tel" class="modal__input modal-tel" placeholder="+7 (___)-___-__-__">
+						<button class="modal__btn blue-btn" type="submit">отправить</button>
+					</form>
+					<div class="modal__privacy">Нажимая кнопку, я принимаю<br>политику обработки <span>персональных данных</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mob-menu">
+			<button class="mob-menu__close"></button>
+			<p class="mob-menu__title">Меню</p>
+			<nav class="mob-menu__nav nav-mob">
+				<ul class="nav-mob__top top-nav-mob">
+					<li class="top-nav-mob__item">
+						<a href="#" class="top-nav-mob__link">О приюте</a>
+					</li>
+					<li class="top-nav-mob__item">
+						<a href="#" class="top-nav-mob__link">Тренировки</a>
+					</li>
+					<li class="top-nav-mob__item">
+						<a href="#" class="top-nav-mob__link">Контакты</a>
+					</li>
+				</ul>
+				<ul class="nav-mob__bot bot-nav-mob">
+					<li class="bot-nav-mob__item">
+						<a href="#" class="bot-nav-mob__link">Наши питомцы</a>
+					</li>
+					<li class="bot-nav-mob__item">
+						<a href="#" class="bot-nav-mob__link bot-nav-mob__link--active">Новости</a>
+					</li>
+					<li class="bot-nav-mob__item">
+						<a href="#" class="bot-nav-mob__link">Благотворительность</a>
+					</li>
+					<li class="bot-nav-mob__item">
+						<a href="#" class="bot-nav-mob__link">Счастливые истории</a>
+					</li>
+				</ul>
+			</nav>
+			<a href="tel:+79147900833" class="mob-menu__tel">+ 7 (914) 790 08 33</a>
+		</div>
+
 		<header class="header">
 			<div class="header__container container">
 				<a href="#" class="header__logo">
@@ -53,6 +106,7 @@
 				</button>
 			</div>
 		</header>
+
 		<main class="main">
 			<section class="hero">
 				<div class="hero__container container">
@@ -61,12 +115,9 @@
 					<p class="hero__subtitle">Они все разные, но мечта у них одна - найти свой дом и быть любимыми.</p>
 					<img class="hero__img-text" src="img/text-hero.png" alt="текст">
 					<div class="hero__buttons">
-						<a href="#" class="hero__btn blue-btn">Найти своего друга</a>
+						<a id="to-modal" class="hero__btn blue-btn">Найти своего друга</a>
 						<a href="#" class="hero__btn blue-btn blue-btn--light">Пожертвовать</a>
 					</div>
-				</div>
-				<div class="hero__image">
-					<img src="img/dog-hero.png" alt="собака">
 				</div>
 			</section>
 			<section class="find">
@@ -575,6 +626,7 @@
 				</div>
 			</section>
 		</main>
+
 		<footer class="footer">
 			<div class="footer__container container">
 				<ul class="footer__tels tels-footer">
@@ -600,9 +652,12 @@
 				</div>
 			</div>
 		</footer>
+
 	</div>
-	<script src="libs/ofi.min.js"></script>
 	<script src="libs/jquery-3.4.1.min.js"></script>
+	<script src="libs/jquery.inputmask.min.js"></script>
+	<script src="libs/jquery.fancybox.min.js"></script>
+	<script src="libs/ofi.min.js"></script>
 	<script src="libs/swiper.min.js"></script>
 	<script src="js/main.js"></script>
 </body>

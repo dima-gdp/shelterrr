@@ -4,6 +4,263 @@
 @import "_overall.scss";
 @import "_burger.scss";
 
+// Modal =======================================================================
+
+.modal {
+	max-width: 570px;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0;
+	background-color: transparent;
+	// .modal__container
+	&__container {
+		display: flex;
+		position: relative;
+		overflow: hidden;
+		background-color: #c6defa;
+		border-radius: 26px;
+	}
+	// .modal__close
+	&__close {
+		width: 25px;
+		height: 25px;
+		position: absolute;
+		top: 15px;
+		right: 12px;
+		background-color: transparent;
+		cursor: pointer;
+
+		@media (min-width: 992px) {
+			&:hover.modal__close::after,
+			&:hover.modal__close::before {
+				background-color: #358bee;
+			}
+		}
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: calc(50% - 1px);
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+			transition: background-color 0.3s;
+		}
+		&::before {
+			transform: rotate(-45deg);
+		}
+		&::after {
+			transform: rotate(45deg);
+		}
+	}
+	// .modal__image
+	&__image {
+		width: 100%;
+		max-width: 170px;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: 50% 50%;
+		height: auto;
+	}
+	// .modal__content
+	&__content {
+		padding: 30px 35px 30px 25px;
+	}
+	// .modal__title
+	&__title {
+		margin-bottom: 10px;
+		padding-bottom: 18px;
+		padding-left: 27px;
+		font-size: 24px;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: -9px;
+			width: 7px;
+			height: 45px;
+			background-color: #0f3057;
+		}
+	}
+	// .modal__subtitle
+	&__subtitle {
+		margin-bottom: 20px;
+		font-size: 16px;
+	}
+	// .modal__form
+	&__form {
+		margin-bottom: 28px;
+	}
+	// .modal__input
+	&__input {
+		min-height: 51px;
+		width: 100%;
+		background-color: transparent;
+		border: 1px solid #545a65;
+		font-size: 16px;
+		padding: 5px 20px;
+		&:not(:last-child) {
+			margin-bottom: 18px;
+		}
+	}
+	// .modal__btn
+	&__btn {
+		width: 100%;
+		min-height: 52px !important;
+	}
+	// .modal__privacy
+	&__privacy {
+		font-size: 12px;
+		color: #5e6675;
+		width: 100%;
+		text-align: left;
+		padding-left: 34px;
+		// background-image: url(../img/polit.png);
+		background-size: 22px auto;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		min-height: 23px;
+		span {
+			text-decoration-line: underline;
+			color: #5e6675;
+		}
+	}
+}
+
+//Mob-menu ======================================================================
+
+.mob-menu {
+	position: fixed;
+	right: -150%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 50px 15px 30px 15px;
+	border-radius: 20px 0 0 20px;
+	z-index: 888;
+	background: #f5ccb8;
+	width: 320px;
+	height: 100%;
+	overflow: auto;
+	box-shadow: 0 0 7px #9e9e9e4d;
+	transition: right 0.4s, visibility 0.4s;
+
+	&.active {
+		visibility: visible;
+		right: 0;
+	}
+	// .mob-menu__close
+	&__close {
+		width: 25px;
+		height: 25px;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		background-color: transparent;
+		cursor: pointer;
+
+		@media (min-width: 992px) {
+			&:hover.mob-menu__close::after,
+			&:hover.mob-menu__close::before {
+				background-color: #358bee;
+			}
+		}
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: calc(50% - 1px);
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+			transition: background-color 0.3s;
+		}
+		&::before {
+			transform: rotate(-45deg);
+		}
+		&::after {
+			transform: rotate(45deg);
+		}
+	}
+	// .mob-menu__title
+	&__title {
+		margin-bottom: 30px;
+		font-weight: 600;
+		font-size: 20px;
+		text-transform: uppercase;
+	}
+	// .mob-menu__nav
+	&__nav {
+		flex: 1 1 auto;
+	}
+	// .mob-menu__tel
+	&__tel {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 220px;
+		height: 45px;
+		padding: 10px;
+		box-shadow: 5px 6px 36px rgba(197, 139, 111, 0.44);
+		border-radius: 28px;
+		background-color: #ffffff;
+		color: #0f3057;
+		font-weight: 700;
+		line-height: 28px;
+	}
+}
+.nav-mob {
+	// .nav-mob__top
+	&__top {
+		margin-bottom: 40px;
+	}
+	// .nav-mob__bot
+	&__bot {
+	}
+}
+.top-nav-mob {
+	// .top-nav-mob__item
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+	// .top-nav-mob__link
+	&__link {
+		color: #358bee;
+		font-size: 16px;
+	}
+}
+.bot-nav-mob {
+	// .bot-nav-mob__item
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+	// .bot-nav-mob__link
+	&__link {
+		color: #0f3057;
+		font-size: 16px;
+		font-weight: 600;
+		text-transform: uppercase;
+
+		&--active {
+			color: #358bee;
+		}
+	}
+	// .bot-nav-mob__link--active
+	&__link--active {
+	}
+}
+
 //Header============================================================================
 .header {
 	padding: 16px 0;
@@ -29,7 +286,8 @@
 		align-items: center;
 		width: 242px;
 		height: 56px;
-		box-shadow: 5px 6px 40px rgba(197, 139, 111, 0.44);
+		padding: 10px;
+		box-shadow: 5px 6px 36px rgba(197, 139, 111, 0.44);
 		border-radius: 28px;
 		background-color: #ffffff;
 		color: #0f3057;
@@ -88,10 +346,9 @@
 // Hero ===================================================================================================
 
 .hero {
-	display: none;
 	background: #f5ccb8;
 	position: relative;
-	min-height: calc(100vh - 114.5px);
+	min-height: calc(100vh - 111.4px);
 	&::after {
 		content: "";
 		position: absolute;
@@ -115,6 +372,7 @@
 	// .hero__container
 	&__container {
 		padding-top: 117px;
+		padding-bottom: 50px;
 		position: relative;
 		z-index: 5;
 	}
@@ -144,10 +402,13 @@
 	}
 	// .hero__btn
 	&__btn {
-		padding-left: 49px;
-		padding-right: 49px;
-		&:not(:last-child) {
+		&:first-child {
+			flex: 0 1 320px;
 			margin-right: 30px;
+		}
+
+		&:last-child {
+			flex: 0 1 270px;
 		}
 	}
 	// .hero__image
@@ -404,12 +665,26 @@
 	}
 	// .about__grid
 	&__grid {
+		max-width: 1298px;
+		padding-left: 83px;
 	}
 
 	&__dog {
 		position: absolute;
 		top: 0;
 		right: 15px;
+		width: 46.53%;
+		padding-bottom: 73.05%;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			font-family: "object-fit: cover; object-position: center;";
+		}
 	}
 
 	&__img-text {
@@ -446,7 +721,7 @@
 
 .grid-about {
 	display: grid;
-	grid-template-columns: repeat(4, minmax(163px, 291px));
+	grid-template-columns: repeat(auto-fit, minmax(254px, auto));
 	grid-gap: 60px;
 	justify-content: space-between;
 	// .grid-about__col
@@ -494,6 +769,7 @@
 	// .donate__image
 	&__image {
 		flex: 0 1 57.5%;
+		max-height: 682px;
 		background: url("../img/donate-dog.png") center center / cover no-repeat;
 	}
 	// .donate__content
@@ -785,6 +1061,10 @@
 		padding: 0px 40px 0px 20px;
 	}
 
+	.bot-nav__link {
+		font-size: 13px;
+	}
+
 	.nav-header__top {
 		padding-bottom: 12px;
 	}
@@ -877,11 +1157,27 @@
 		margin: 0px 0px 20px 0px;
 		padding: 0;
 	}
+
+	.modal__image {
+		display: none;
+	}
 }
 
 @media (max-width: 500px) {
 	.header__tel {
 		order: 2;
 		width: 280px;
+	}
+
+	.modal__content {
+		padding: 50px 35px 30px 25px;
+	}
+
+	.modal__title {
+		font-size: 20px;
+		padding-left: 15px;
+		&::after {
+			height: 40px;
+		}
 	}
 }
