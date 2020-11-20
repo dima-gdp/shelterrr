@@ -6,6 +6,27 @@ $(document).ready(function () {
 	const burger = $('.header__burger')
 	const slidersTabs = document.querySelectorAll('.slider-1__container')
 
+
+	const slider_hero = new Swiper('.slider-hero', {
+
+		slidesPerView: 1,
+		spaceBetween: 30,
+		observer: true,
+		observeParents: true,
+		loop: false,
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		},
+	});
+
+
+
 	slidersTabs.forEach(function (el) {
 
 		const slider_1 = new Swiper(el, {

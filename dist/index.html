@@ -16,7 +16,7 @@
 	<div class="wrapper">
 		<div id="modal" class="modal">
 			<div class="modal__container">
-				<button class="modal__close"></button>
+				<button class="modal__close" data-fancybox-close></button>
 				<div class="modal__image" style="background-image: url('img/about-dog.png');"></div>
 				<div class="modal__content">
 					<div class="modal__title title">Заказать звонок</div>
@@ -108,18 +108,42 @@
 		</header>
 
 		<main class="main">
-			<section class="hero">
-				<div class="hero__container container">
-					<h2 class="hero__title title"><span class="title--blue">приют</span><br>
-						для бездомных кошек и собак</h2>
-					<p class="hero__subtitle">Они все разные, но мечта у них одна - найти свой дом и быть любимыми.</p>
-					<img class="hero__img-text" src="img/text-hero.png" alt="текст">
-					<div class="hero__buttons">
-						<a id="to-modal" class="hero__btn blue-btn">Найти своего друга</a>
-						<a href="#" class="hero__btn blue-btn blue-btn--light">Пожертвовать</a>
+			<section class="first">
+				<div class="first__container container">
+					<div class="first__body">
+						<h2 class="first__title title"><span class="title--blue">приют</span><br>
+							для бездомных кошек и собак</h2>
+						<p class="first__subtitle">Они все разные, но мечта у них одна - найти свой дом и быть любимыми.</p>
+						<div class="first__buttons">
+							<a id="to-modal" class="first__btn blue-btn">Найти своего друга</a>
+							<a href="#" class="first__btn blue-btn blue-btn--light">Пожертвовать</a>
+						</div>
+					</div>
+					<span class="first__img-text"></span>
+				</div>
+				<div class="first__slider">
+					<div class="first__slider-container">
+						<div class="slider-hero swiper-container">
+							<div class="swiper-wrapper">
+								<div class="slider-hero__slide swiper-slide">
+									<div class="slider-hero__image" style="background-image: url('img/dog-hero.png');">
+										<img src="img/fake-img-hero.jpg" alt="">
+									</div>
+								</div>
+								<div class="slider-hero__slide swiper-slide">
+									<div class="slider-hero__image"
+										style="background-image: url('https://pngimg.com/uploads/dog/dog_PNG50346.png');">
+										<img src="img/fake-img-hero.jpg" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+
 					</div>
 				</div>
 			</section>
+
 			<section class="find">
 				<div class="find__container container">
 					<h2 class="find__title title">Найди своего питомца</h2>
@@ -135,7 +159,7 @@
 								<div class="slider-1">
 									<div class="slider-1__container swiper-container">
 										<div class="slider-tabs swiper-wrapper active">
-											<div class="slider-tabs__item swiper-slide">
+											<a href="#" class="slider-tabs__item swiper-slide">
 												<div class="slider-tabs__photo">
 													<img src="img/find-1.jpg" alt="фото">
 												</div>
@@ -156,7 +180,7 @@
 													<span class="slider-tabs__key">Пол:</span>
 													<span class="slider-tabs__value">женский</span>
 												</div>
-											</div>
+											</a>
 											<div class="slider-tabs__item swiper-slide">
 												<div class="slider-tabs__photo">
 													<img src="img/find-2.jpg" alt="фото">
