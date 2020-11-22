@@ -587,7 +587,7 @@ body {
 }
 
 .bot-nav__item:not(:last-child) {
-  margin-right: 40px;
+  margin-right: 38px;
 }
 
 .bot-nav__link {
@@ -613,7 +613,7 @@ body {
 
 .first__body {
   max-width: 651px;
-  padding: 93px 0px 167px 0px;
+  padding: 8.6% 0px 12% 0px;
   position: relative;
   z-index: 5;
 }
@@ -676,7 +676,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../img/Ellipse-hero.svg") 0 100% no-repeat;
+  background: url("../img/ellipse-hero.svg") 0 100% no-repeat;
   opacity: 0.45;
 }
 
@@ -784,47 +784,13 @@ body {
   background-color: #358bee;
 }
 
-.bln {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 311px;
-  height: 177px;
-  background: url("../img/point-map.svg") 0 0/contain no-repeat;
-  text-align: center;
-}
-
-.bln__inner {
-  height: 100%;
-  padding: 35px 20px 45px 20px;
-  position: relative;
-}
-
-.bln__close {
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  top: 7px;
-  right: 7px;
-}
-
-.bln__text {
-  color: #ffffff;
-  font-family: "Montserrat";
-  font-size: 20px;
-  letter-spacing: 0.5px;
-}
-
-.bln__text:not(:last-child) {
-  margin-bottom: 10px;
-}
-
 .find__container {
-  padding-top: 87px;
+  padding-top: 79px;
   padding-bottom: 112px;
 }
 
 .find__title {
-  margin-bottom: 60px;
+  margin-bottom: 51px;
   font-size: 40px;
   line-height: 60px;
   letter-spacing: 1px;
@@ -847,28 +813,24 @@ body {
   color: #ffffff;
   font-size: 16px;
   letter-spacing: 0.4px;
+  text-transform: uppercase;
 }
 
 .tabs {
-  margin-bottom: 68px;
+  margin-bottom: 25px;
 }
 
 .tabs__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   color: #000000;
-  font-size: 20px;
 }
 
 .tabs__item {
-  padding: 12px 36px;
+  padding: 12px 35px;
   cursor: pointer;
-}
-
-.tabs__item:not(:last-child) {
-  margin-right: 27px;
 }
 
 .tabs__item.active {
@@ -992,24 +954,25 @@ body {
   border-radius: 50%;
   background: #358bee url("../svg/arrow-slider.svg") 45% 50% no-repeat;
   z-index: 2;
+  cursor: pointer;
 }
 
 .slider-1__next {
   right: 0px;
-  -webkit-transform: translate(50%, -50%) rotate(180deg);
-      -ms-transform: translate(50%, -50%) rotate(180deg);
-          transform: translate(50%, -50%) rotate(180deg);
+  -webkit-transform: translate(50%, -100%) rotate(180deg);
+      -ms-transform: translate(50%, -100%) rotate(180deg);
+          transform: translate(50%, -100%) rotate(180deg);
 }
 
 .slider-1__prev {
   left: 0;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -100%);
+      -ms-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
 }
 
 .about {
-  padding-bottom: 151px;
+  padding-bottom: 124px;
   background: url("../img/about-bg.svg") 0 100%/contain no-repeat;
 }
 
@@ -1019,8 +982,8 @@ body {
 
 .about__top {
   max-width: 703px;
-  margin-bottom: 546px;
-  padding-top: 81px;
+  margin-bottom: 539px;
+  padding-top: 67px;
 }
 
 .about__grid {
@@ -1059,7 +1022,7 @@ body {
 }
 
 .top-about__title {
-  margin-bottom: 58px;
+  margin-bottom: 41px;
   font-size: 40px;
   line-height: 60px;
   letter-spacing: 1px;
@@ -1072,7 +1035,7 @@ body {
 }
 
 .top-about__text:not(:last-child) {
-  margin-bottom: 15px;
+  margin-bottom: 26px;
 }
 
 .top-about__text--bold {
@@ -1125,8 +1088,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 67px;
-  padding-bottom: 30px;
+  padding-top: 58px;
+  padding-bottom: 8.4%;
 }
 
 .donate__image {
@@ -1138,14 +1101,14 @@ body {
 }
 
 .donate__content {
-  padding: 149px 0px 84px 31px;
+  padding: 126px 0px 84px 31px;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 42.5%;
           flex: 0 1 42.5%;
 }
 
 .donate__title {
-  margin-bottom: 11.7%;
+  margin-bottom: 9%;
   font-size: 40px;
   line-height: 60px;
   letter-spacing: 1px;
@@ -1160,14 +1123,14 @@ body {
 
 .donate__subtitle span {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   font-size: 48px;
   font-weight: 700;
   letter-spacing: 1.2px;
 }
 
 .donate__info {
-  margin-bottom: 50px;
+  margin-bottom: 52px;
   font-size: 16px;
   letter-spacing: 0.4px;
   color: #000;
@@ -1190,14 +1153,14 @@ body {
 }
 
 .our-animals__title {
-  margin-bottom: 98px;
+  margin-bottom: 49px;
   font-size: 40px;
   line-height: 60px;
   letter-spacing: 1px;
 }
 
 .our-animals__slider {
-  margin-bottom: 80px;
+  margin-bottom: 41px;
   position: relative;
 }
 
@@ -1238,6 +1201,7 @@ body {
   border-radius: 50%;
   background: #358bee url("../svg/arrow-slider.svg") 45% 50% no-repeat;
   z-index: 2;
+  cursor: pointer;
 }
 
 .slider-2__next {
@@ -1276,7 +1240,7 @@ body {
 .comment__image {
   margin-bottom: 40px;
   position: relative;
-  padding-bottom: 63.7%;
+  padding-bottom: 55%;
   border-radius: 20px 20px 0 0;
   overflow: hidden;
 }
@@ -1295,14 +1259,14 @@ body {
 }
 
 .comment__name {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   font-size: 30px;
   font-weight: 600;
   letter-spacing: 0.75px;
 }
 
 .comment__text {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: #000000;
   font-size: 20px;
   -webkit-box-flex: 1;
@@ -1334,14 +1298,14 @@ body {
 }
 
 .join__form {
-  padding: 128px 15px 157px 117px;
+  padding: 122px 15px 157px 117px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 630px;
           flex: 0 0 630px;
 }
 
 .join__title {
-  margin-bottom: 38px;
+  margin-bottom: 27px;
   font-size: 40px;
   line-height: 60px;
   letter-spacing: 1px;
@@ -1370,6 +1334,42 @@ body {
 
 .join__btn {
   width: 436px;
+  min-height: 89px;
+  font-size: 18px;
+}
+
+.bln {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 311px;
+  height: 177px;
+  background: url("../img/point-map.svg") 0 0/contain no-repeat;
+  text-align: center;
+}
+
+.bln__inner {
+  height: 100%;
+  padding: 35px 20px 45px 20px;
+  position: relative;
+}
+
+.bln__close {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+}
+
+.bln__text {
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+.bln__text:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .footer {
