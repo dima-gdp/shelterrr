@@ -607,29 +607,23 @@ body {
   position: relative;
 }
 
-.first__container {
-  position: relative;
-}
-
 .first__body {
-  max-width: 651px;
   padding: 8.6% 0px 12% 0px;
   position: relative;
   z-index: 5;
 }
 
 .first__img-text {
-  position: absolute;
-  top: 425px;
-  right: 20px;
-  width: 84.5%;
-  padding-bottom: 43.7%;
+  margin-left: 12%;
+  position: relative;
+  padding-bottom: 18.9%;
   background: url("../img/text-hero.png") 0 0/contain no-repeat;
   z-index: 6;
   pointer-events: none;
 }
 
 .first__title {
+  max-width: 651px;
   margin-bottom: 18px;
   font-size: 50px;
   letter-spacing: 1.25px;
@@ -637,12 +631,14 @@ body {
 }
 
 .first__subtitle {
-  margin-bottom: 279px;
+  max-width: 651px;
+  margin-bottom: 20px;
   color: #0f3057;
   font-size: 24px;
 }
 
 .first__buttons {
+  max-width: 651px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -737,9 +733,12 @@ body {
 
 .slider-hero .swiper-pagination-bullet-active {
   opacity: 1;
+  width: 17px;
+  height: 17px;
+  border: 2px solid #fff;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1201px) {
   .first__slider {
     position: absolute;
     top: 0;
@@ -982,8 +981,10 @@ body {
 
 .about__top {
   max-width: 703px;
-  margin-bottom: 539px;
+  margin-bottom: 39%;
   padding-top: 67px;
+  position: relative;
+  z-index: 3;
 }
 
 .about__grid {
@@ -991,34 +992,37 @@ body {
   padding-left: 83px;
 }
 
-.about__dog {
+.about__image {
   position: absolute;
   top: 0;
   right: 15px;
-  width: 46.53%;
+  width: 81.1%;
   padding-bottom: 73.05%;
+  z-index: 2;
 }
 
-.about__dog img {
+.about__image img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  font-family: "object-fit: cover; object-position: center;";
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: right top;
+     object-position: right top;
+  font-family: "object-fit: contain; object-position: right top;";
 }
 
-.about__img-text {
+.about__image::after {
+  content: "";
   position: absolute;
   top: 266px;
-  right: 15px;
-  width: 81.1%;
-  padding-bottom: 43.7%;
+  right: 0;
+  width: 100%;
+  padding-bottom: 52.7%;
   background: url("../img/about-text.png") 0 0/contain no-repeat;
+  pointer-events: none;
 }
 
 .top-about__title {
@@ -1094,17 +1098,17 @@ body {
 
 .donate__image {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 57.5%;
-          flex: 0 1 57.5%;
+      -ms-flex: 0 0 57.5%;
+          flex: 0 0 57.5%;
   max-height: 682px;
   background: url("../img/donate-dog.png") center center/cover no-repeat;
 }
 
 .donate__content {
   padding: 126px 0px 84px 31px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 42.5%;
-          flex: 0 1 42.5%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .donate__title {
@@ -1288,7 +1292,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-right: 15px;
 }
 
 .join__map {
@@ -1429,34 +1432,226 @@ body {
   margin-bottom: 25px;
 }
 
-@media (max-width: 1340px) {
-  .bot-nav__item:not(:last-child) {
-    margin-right: 20px;
+@media (max-width: 1490px) {
+  .slider-1 {
+    padding: 0 43px;
   }
-  .header__tel {
-    width: 16%;
-    height: 45px;
-    font-size: 15px;
+  .slider-1__prev {
+    -webkit-transform: translate(0, -100%);
+        -ms-transform: translate(0, -100%);
+            transform: translate(0, -100%);
   }
-  .header__nav {
-    padding: 0px 40px 0px 20px;
+  .slider-1__next {
+    -webkit-transform: translate(0, -100%) rotate(180deg);
+        -ms-transform: translate(0, -100%) rotate(180deg);
+            transform: translate(0, -100%) rotate(180deg);
   }
-  .bot-nav__link {
-    font-size: 13px;
+  .our-animals__slider {
+    padding: 0 43px;
   }
-  .nav-header__top {
-    padding-bottom: 12px;
+  .slider-2__prev {
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
   }
-  .nav-header__bot {
-    padding-top: 15px;
+  .slider-2__next {
+    -webkit-transform: translate(0, -50%) rotate(180deg);
+        -ms-transform: translate(0, -50%) rotate(180deg);
+            transform: translate(0, -50%) rotate(180deg);
   }
-  .footer__container {
-    padding-top: 7%;
-    padding-bottom: 10%;
+}
+
+@media (max-width: 1410px) {
+  .first__body {
+    padding: 6.6% 0px 6% 0px;
+  }
+  .slider-hero__image img {
+    height: auto;
+  }
+  .grid-about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, auto));
+    grid-column-gap: 60px;
+    grid-row-gap: 70px;
+  }
+  .about__grid {
+    padding-left: 55px;
+  }
+  .grid-about__number {
+    margin-bottom: 15px;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .grid-about__col::after {
+    top: -51px;
+    left: -52px;
+    width: 130px;
+    height: 130px;
+  }
+  .about {
+    padding-bottom: 100px;
+  }
+  .about__top {
+    margin-bottom: 30%;
+  }
+  .about__image {
+    padding-bottom: 63.05%;
+  }
+  .join__input {
+    width: 400px;
+    height: 65px;
+  }
+  .join__btn {
+    width: 400px;
+    min-height: 70px;
+    font-size: 17px;
+  }
+  .join__form {
+    padding: 100px 15px 100px 90px;
+  }
+  .comment {
+    padding: 50px;
+  }
+  .donate__image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 48.5%;
+            flex: 0 0 48.5%;
+    max-height: 682px;
+    background: url("../img/donate-dog.png") center center/contain no-repeat;
+  }
+  .donate__content {
+    padding: 70px 0px 70px 30px;
   }
 }
 
 @media (max-width: 1200px) {
+  .first {
+    min-height: auto;
+  }
+  .first__subtitle {
+    margin-bottom: 30px;
+  }
+  .slider-hero {
+    height: auto;
+  }
+  .first__slider {
+    padding-left: 0;
+  }
+  .first__slider-container {
+    margin: 0 auto;
+    max-width: 850px;
+  }
+  .slider-hero__image {
+    background-size: contain;
+    background-position: center bottom;
+  }
+  .first__slider::after {
+    background: url("../img/ellipse-hero.svg") 0 100%/contain no-repeat;
+  }
+  .slider-1__btn {
+    width: 65px;
+    height: 65px;
+  }
+  .slider-2__btn {
+    width: 60px;
+    height: 60px;
+  }
+  .slider-1 {
+    padding: 0 28px;
+  }
+  .donate__title {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+  .donate__subtitle span {
+    font-size: 44px;
+  }
+  .our-animals__slider {
+    padding: 0 28px;
+  }
+  .first__img-text {
+    margin-bottom: 20px;
+    position: relative;
+    top: -25px;
+    padding-bottom: 15.9%;
+    background: url("../img/text-hero.png") 100% 0/contain no-repeat;
+  }
+  .about__image {
+    position: relative;
+    right: 0;
+    width: 100%;
+    padding-bottom: 45%;
+    margin-bottom: 30px;
+  }
+  .about__image img {
+    -o-object-position: center;
+       object-position: center;
+    font-family: "object-fit: contain; object-position: center;";
+  }
+  .about__image::after {
+    top: 0;
+    padding-bottom: 33%;
+    background: url("../img/about-text.png") center/contain no-repeat;
+  }
+  .about__top {
+    margin-bottom: 40px;
+  }
+  .grid-about__number {
+    font-size: 40px;
+  }
+  .grid-about__text {
+    letter-spacing: 0.3px;
+    font-size: 17px;
+  }
+  .donate__container {
+    padding-top: 50px;
+    padding-bottom: 4.4%;
+  }
+  .our-animals__title {
+    margin-bottom: 40px;
+    font-size: 35px;
+    line-height: 1.3;
+    letter-spacing: 0.7px;
+  }
+  .comment {
+    padding: 25px 50px 30px 40px;
+  }
+  .comment__name {
+    font-size: 24px;
+  }
+  .comment__text {
+    font-size: 17px;
+  }
+  .comment__time {
+    font-size: 14px;
+  }
+  .join__form {
+    padding: 50px 15px 50px 40px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+  .join__map {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+  .join__title {
+    margin-bottom: 20px;
+    font-size: 35px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+  }
+  .join__subtitle {
+    margin-bottom: 40px;
+    font-size: 20px;
+    letter-spacing: normal;
+  }
+  .join__input {
+    width: 90%;
+    height: 65px;
+  }
   .header__tel {
     width: 242px;
     height: 56px;
@@ -1476,6 +1671,117 @@ body {
 }
 
 @media (max-width: 992px) {
+  .first__slider::after {
+    background: url("../img/ellipse-hero.svg") center 0/cover no-repeat;
+  }
+  .first__title {
+    font-size: 45px;
+    letter-spacing: 1px;
+    line-height: 1.3;
+  }
+  .first__subtitle {
+    font-size: 22px;
+  }
+  .first__img-text {
+    margin-bottom: 45px;
+    margin-left: 0;
+    position: relative;
+    top: 0;
+    padding-bottom: 20.9%;
+    background: url("../img/text-hero.png") center/contain no-repeat;
+  }
+  .blue-btn {
+    min-height: 65px;
+    font-size: 16px;
+  }
+  .first__btn:first-child {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 290px;
+            flex: 0 1 290px;
+  }
+  .first__btn:last-child {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 240px;
+            flex: 0 1 240px;
+  }
+  .first__slider-container {
+    max-width: 550px;
+  }
+  .first__body {
+    padding: 7.6% 0px 9% 0px;
+  }
+  .find__container {
+    padding-bottom: 60px;
+  }
+  .tabs__item {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  .about {
+    padding-bottom: 60px;
+  }
+  .donate__content {
+    padding: 40px 0px 40px 30px;
+  }
+  .donate__container {
+    padding-top: 50px;
+    padding-bottom: 6.4%;
+  }
+  .donate__image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 35%;
+            flex: 0 0 35%;
+  }
+  .donate__title {
+    margin-bottom: 5%;
+    font-size: 31px;
+    line-height: 1.3;
+  }
+  .donate__subtitle span {
+    font-size: 38px;
+  }
+  .donate__subtitle {
+    margin-bottom: 30px;
+    font-size: 25px;
+    letter-spacing: 0.4px;
+  }
+  .donate__info {
+    margin-bottom: 45px;
+    font-size: 15px;
+  }
+  .our-animals__title {
+    margin-bottom: 20px;
+    font-size: 31px;
+  }
+  .slider-2 .swiper-slide-active {
+    -webkit-box-shadow: 5px 6px 24px rgba(53, 139, 238, 0.7);
+            box-shadow: 5px 6px 24px rgba(53, 139, 238, 0.7);
+  }
+  .join__btn {
+    width: 90%;
+    min-height: 70px;
+    font-size: 17px;
+  }
+  .join__input {
+    margin-bottom: 25px;
+    padding: 10px 25px;
+    font-size: 16px;
+  }
+  .join__title {
+    margin-bottom: 20px;
+    font-size: 31px;
+  }
+  .join__subtitle {
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
+  .footer__container {
+    padding-top: 8%;
+    padding-bottom: 9%;
+  }
+  .footer__tels {
+    margin-bottom: 40px;
+  }
   .tels-footer__link {
     font-size: 15px;
     font-weight: 700;
@@ -1503,53 +1809,269 @@ body {
   }
 }
 
-@media (max-width: 652px) {
-  .header__container {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+@media (min-width: 769px) and (max-width: 992px) {
+  .comment {
+    padding: 25px 30px 30px 30px;
   }
-  .header__tel {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    width: 52%;
-    margin: 20px auto 0px auto;
+  .comment__image {
+    margin-bottom: 25px;
   }
-  .footer__container {
-    padding-top: 35px;
-    padding-bottom: 50px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .comment__name {
+    margin-bottom: 12px;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: normal;
   }
-  .footer__tels {
-    margin-bottom: 30px;
+  .comment__text {
+    font-size: 15px;
   }
-  .footer__adresses {
-    margin: 0px 0px 20px 0px;
-    padding: 0;
+  .comment__time {
+    font-size: 12px;
   }
-  .modal__image {
-    display: none;
+  .our-animals__slider {
+    padding: 0 25px;
+  }
+  .slider-2__btn {
+    width: 50px;
+    height: 50px;
+    background: #358bee url("../svg/arrow-slider.svg") 45% 50%/50% 50% no-repeat;
+  }
+  .slider-2 {
+    margin: 0 -25px;
+    padding: 40px 25px;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .header__tel {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    width: 280px;
+    display: none;
   }
-  .modal__content {
-    padding: 50px 35px 30px 25px;
+  .first__slider::after {
+    background: url("../img/ellipse-hero.svg") center bottom/contain no-repeat;
   }
-  .modal__title {
+  .slider-1__container {
+    margin: 0 -23px;
+    padding: 40px 23px;
+  }
+  .slider-1 .swiper-slide-active {
+    -webkit-box-shadow: 5px 6px 23px rgba(53, 139, 238, 0.7);
+            box-shadow: 5px 6px 23px rgba(53, 139, 238, 0.7);
+  }
+  .slider-tabs__row {
+    margin: 0px 25px 0px 25px;
+  }
+  .slider-tabs__value {
+    font-size: 13px;
+  }
+  .slider-tabs__key {
+    font-size: 13px;
+  }
+  .slider-tabs__photo {
+    padding-bottom: 109%;
+  }
+  .slider-1 {
+    padding: 0 25px;
+  }
+  .slider-1__btn {
+    width: 50px;
+    height: 50px;
+    background: #358bee url("../svg/arrow-slider.svg") 45% 50%/50% 50% no-repeat;
+  }
+  .find__title {
+    margin-bottom: 35px;
+    font-size: 31px;
+  }
+  .tabs__item {
+    font-size: 15px;
+  }
+  .find__btn {
+    width: 219px;
+    height: 75px;
+    background: url("../svg/btn-find.svg") 0 0/cover no-repeat;
+    font-size: 14px;
+  }
+  .first__btn:first-child {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 250px;
+            flex: 0 1 250px;
+    font-size: 14px;
+  }
+  .first__btn:last-child {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 220px;
+            flex: 0 1 220px;
+    font-size: 14px;
+  }
+  .top-about__title {
+    margin-bottom: 35px;
+    font-size: 34px;
+    line-height: 1.2;
+    letter-spacing: 0.7px;
+  }
+  .top-about__text:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .top-about__text {
+    font-size: 21px;
+    letter-spacing: 0.5px;
+  }
+  .grid-about__col::after {
+    top: -28px;
+    left: -33px;
+    width: 70px;
+    height: 70px;
+  }
+  .about__grid {
+    padding-left: 33px;
+  }
+  .grid-about__number {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .grid-about__text {
+    font-size: 14px;
+  }
+  .grid-about {
+    grid-column-gap: 40px;
+  }
+  .donate__content {
+    padding: 40px 0px 40px 20px;
+  }
+  .join__form {
+    padding: 30px 15px 30px 25px;
+  }
+  .join__title {
+    font-size: 23px;
+  }
+  .join__subtitle {
+    margin-bottom: 30px;
+    font-size: 15px;
+  }
+  .join__input {
+    padding: 10px 15px;
+    font-size: 13px;
+    height: 45px;
+    width: 100%;
+  }
+  .join__btn {
+    width: 100%;
+    min-height: 50px;
+    font-size: 14px;
+  }
+  .footer__adresses {
+    margin: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .blue-btn {
+    min-height: 50px;
+    font-size: 13px;
+  }
+  .header__logo {
+    width: 196px;
+  }
+  .first__title {
+    font-size: 8vw;
+    letter-spacing: normal;
+    line-height: 1.2;
+  }
+  .first__subtitle {
+    font-size: 6vw;
+  }
+  .first__img-text {
+    margin-bottom: 40px;
+    padding-bottom: 24.9%;
+  }
+  .first__buttons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .first__btn:first-child {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 250px;
+            flex: 0 1 250px;
+    margin-bottom: 25px;
+    font-size: 13px;
+  }
+  .first__btn:last-child {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 250px;
+            flex: 0 1 250px;
+    font-size: 13px;
+  }
+  .slider-hero .swiper-pagination-bullets {
+    bottom: 20px;
+  }
+  .find__title {
+    margin-bottom: 30px;
+    font-size: 8vw;
+    line-height: 1.1;
+  }
+  .find__btn {
+    font-size: 13px;
+  }
+  .tabs__items {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+  .tabs__item {
+    font-size: 13px;
+  }
+  .about__top {
+    padding-top: 10px;
+  }
+  .top-about__title {
+    margin-bottom: 25px;
+    font-size: 8vw;
+    line-height: 1.2;
+    letter-spacing: normal;
+  }
+  .top-about__text {
+    font-size: 5vw;
+    letter-spacing: normal;
+  }
+  .about__image {
+    padding-bottom: 60%;
+  }
+  .about__image::after {
+    padding-bottom: 47%;
+  }
+  .grid-about {
+    grid-row-gap: 38px;
+  }
+  .donate__container {
+    display: block;
+    padding-top: 50px;
+    padding-bottom: 6.4%;
+  }
+  .donate__image {
+    padding-bottom: 71%;
+  }
+  .donate__content {
+    padding: 40px 0px 40px 0px;
+  }
+  .donate__title {
+    margin-bottom: 5%;
+    font-size: 8vw;
+    line-height: 1.1;
+    letter-spacing: normal;
+  }
+  .donate__subtitle span {
+    font-size: 8.2vw;
+  }
+  .donate__subtitle {
+    margin-bottom: 25px;
     font-size: 20px;
-    padding-left: 15px;
+    letter-spacing: normal;
   }
-  .modal__title::after {
-    height: 40px;
+  .donate__btn-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }

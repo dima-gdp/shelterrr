@@ -36,11 +36,30 @@ $(document).ready(function () {
 			observer: true,
 			observeParents: true,
 			observeSlideChildren: true,
-			loop: true,
+			loop: false,
 			navigation: {
 				nextEl: el.closest('.slider-1').querySelector('.slider-1__next'),
 				prevEl: el.closest('.slider-1').querySelector('.slider-1__prev'),
 			},
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 25,
+				},
+				577: {
+					slidesPerView: 2,
+					spaceBetween: 25,
+				},
+				769: {
+					spaceBetween: 31,
+				},
+				948: {
+					slidesPerView: 3,
+				},
+				1240: {
+					slidesPerView: 4,
+				},
+			}
 		});
 	})
 
@@ -50,11 +69,27 @@ $(document).ready(function () {
 		spaceBetween: 31,
 		// observer: true,
 		// observeParents: true,
-		loop: true,
+		loop: false,
 		navigation: {
 			nextEl: '.slider-2__next',
 			prevEl: '.slider-2__prev',
 		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 31,
+
+			},
+			769: {
+				slidesPerView: 2,
+				spaceBetween: 25,
+
+			},
+			993: {
+				slidesPerView: 2,
+				spaceBetween: 31,
+			},
+		}
 	});
 
 
