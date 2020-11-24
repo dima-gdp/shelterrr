@@ -53,14 +53,25 @@ $(document).ready(function () {
 					spaceBetween: 25,
 				},
 				769: {
+					spaceBetween: 61,
+					slidesPerView: 2,
+				},
+				884: {
+					spaceBetween: 100,
+					slidesPerView: 2,
+				},
+				1090: {
+					slidesPerView: 3,
 					spaceBetween: 31,
 				},
-				948: {
-					slidesPerView: 3,
-				},
 				1240: {
-					slidesPerView: 4,
+					slidesPerView: 3,
+					spaceBetween: 61,
 				},
+				1340: {
+					slidesPerView: 4,
+					spaceBetween: 31,
+				}
 			}
 		});
 	})

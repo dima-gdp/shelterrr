@@ -942,7 +942,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-bottom: 40px;
-  border-radius: 20px;
+  border-radius: 29px;
   background-color: #fff;
   overflow: hidden;
   -webkit-transition: -webkit-box-shadow 0.3s;
@@ -1415,6 +1415,7 @@ body {
   font-size: 30px;
   font-weight: 600;
   letter-spacing: 0.75px;
+  color: #000;
 }
 
 .comment__text {
@@ -1803,7 +1804,7 @@ body {
     letter-spacing: normal;
   }
   .join__input {
-    width: 90%;
+    width: 396px;
     height: 65px;
   }
   .header__tel {
@@ -1944,6 +1945,7 @@ body {
     font-size: 17px;
   }
   .join__input {
+    width: 90%;
     margin-bottom: 25px;
     padding: 10px 25px;
     font-size: 16px;
@@ -2052,11 +2054,6 @@ body {
   }
   .slider-1 {
     padding: 0 25px;
-  }
-  .slider-1__btn {
-    width: 50px;
-    height: 50px;
-    background: #358bee url("../svg/arrow-slider.svg") 45% 50%/50% 50% no-repeat;
   }
   .find__title {
     margin-bottom: 35px;
@@ -2197,17 +2194,7 @@ body {
     display: none;
   }
   .slider-1 {
-    padding: 0;
-  }
-  .slider-1__prev {
-    -webkit-transform: translate(-30%, -100%);
-        -ms-transform: translate(-30%, -100%);
-            transform: translate(-30%, -100%);
-  }
-  .slider-1__next {
-    -webkit-transform: translate(30%, -100%) rotate(180deg);
-        -ms-transform: translate(30%, -100%) rotate(180deg);
-            transform: translate(30%, -100%) rotate(180deg);
+    padding: 0 15%;
   }
   .slider-hero .swiper-pagination-bullets {
     bottom: 20px;
@@ -2355,5 +2342,26 @@ body {
   .footer__adresses {
     margin-bottom: 40px;
     padding: 0;
+  }
+  .slider-1__btn {
+    width: 50px;
+    height: 50px;
+    background: #358bee url("../svg/arrow-slider.svg") 45% 50%/50% 50% no-repeat;
+  }
+}
+
+@media (max-width: 420px) {
+  .slider-1 {
+    padding: 0;
+  }
+  .slider-1__prev {
+    -webkit-transform: translate(-30%, -100%);
+        -ms-transform: translate(-30%, -100%);
+            transform: translate(-30%, -100%);
+  }
+  .slider-1__next {
+    -webkit-transform: translate(30%, -100%) rotate(180deg);
+        -ms-transform: translate(30%, -100%) rotate(180deg);
+            transform: translate(30%, -100%) rotate(180deg);
   }
 }
