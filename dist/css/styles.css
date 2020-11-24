@@ -252,7 +252,7 @@ body {
   display: flex;
   position: relative;
   overflow: hidden;
-  background-color: #c6defa;
+  background-color: #f2e3dc;
   border-radius: 26px;
 }
 
@@ -487,6 +487,10 @@ body {
 }
 
 .nav-mob__top {
+  margin-bottom: 40px;
+}
+
+.nav-mob__bot {
   margin-bottom: 40px;
 }
 
@@ -762,8 +766,6 @@ body {
 
 .slider-hero .swiper-pagination-bullet-active {
   opacity: 1;
-  width: 17px;
-  height: 17px;
   border: 2px solid #fff;
 }
 
@@ -900,12 +902,15 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 21px;
   color: #000000;
 }
 
 .tabs__item {
   padding: 12px 35px;
+  border-radius: 22px;
   cursor: pointer;
   -webkit-transition: color 0.3s;
   -o-transition: color 0.3s;
@@ -915,7 +920,6 @@ body {
 .tabs__item.active {
   -webkit-box-shadow: 9px 12px 49px rgba(53, 139, 238, 0.4);
           box-shadow: 9px 12px 49px rgba(53, 139, 238, 0.4);
-  border-radius: 22px;
   background-color: #ffffff;
 }
 
@@ -1001,6 +1005,7 @@ body {
 }
 
 .slider-tabs__key {
+  margin-right: 10px;
   color: #000000;
   font-size: 14px;
   letter-spacing: 0.35px;
@@ -1509,8 +1514,32 @@ body {
   width: 15px;
   height: 15px;
   position: absolute;
-  top: 7px;
-  right: 7px;
+  top: 15px;
+  right: 12px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.bln__close::before, .bln__close::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.bln__close::before {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.bln__close::after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .bln__text {
@@ -1612,10 +1641,10 @@ body {
 
 @media (max-width: 1410px) {
   .bot-nav__item:not(:last-child) {
-    margin-right: 23px;
+    margin-right: 21px;
   }
   .bot-nav__link {
-    font-size: 12px;
+    font-size: 11.5px;
   }
   .first__body {
     padding: 6.6% 0px 6% 0px;
@@ -1751,6 +1780,7 @@ body {
   }
   .about__top {
     margin-bottom: 40px;
+    max-width: none;
   }
   .grid-about__number {
     font-size: 40px;
@@ -1835,8 +1865,8 @@ body {
     position: relative;
   }
   .bln__close {
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     position: absolute;
     top: 7px;
     right: 7px;
@@ -1893,7 +1923,8 @@ body {
     padding: 7.6% 0px 9% 0px;
   }
   .find__container {
-    padding-bottom: 60px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
   .tabs__item {
     padding: 10px 20px;
@@ -1901,6 +1932,9 @@ body {
   }
   .about {
     padding-bottom: 60px;
+  }
+  .about__top {
+    padding-top: 10px;
   }
   .donate__content {
     padding: 40px 0px 40px 30px;
@@ -2060,7 +2094,16 @@ body {
     font-size: 31px;
   }
   .tabs__item {
-    font-size: 15px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    text-align: center;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #c6defa;
+  }
+  .tabs__items {
+    margin-bottom: 0;
   }
   .find__btn {
     width: 219px;
@@ -2186,6 +2229,9 @@ body {
             flex: 1 1 auto;
     font-size: 13px;
   }
+  .tabs {
+    margin-bottom: 5px;
+  }
   .fancybox-slide {
     padding-left: 0px;
     padding-right: 0px;
@@ -2201,31 +2247,23 @@ body {
   }
   .find__title {
     margin-bottom: 30px;
-    font-size: 8vw;
+    font-size: 28px;
     line-height: 1.1;
   }
   .find__btn {
     font-size: 13px;
   }
-  .tabs__items {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-bottom: 0;
-  }
   .tabs__item {
     font-size: 13px;
   }
-  .about__top {
-    padding-top: 10px;
-  }
   .top-about__title {
     margin-bottom: 25px;
-    font-size: 8vw;
+    font-size: 28px;
     line-height: 1.2;
     letter-spacing: normal;
   }
   .top-about__text {
-    font-size: 5vw;
+    font-size: 21px;
     letter-spacing: normal;
   }
   .about__image {
@@ -2246,21 +2284,24 @@ body {
     padding-bottom: 71%;
   }
   .donate__content {
-    padding: 40px 0px 40px 0px;
+    padding: 30px 0px 10px 0px;
   }
   .donate__title {
     margin-bottom: 5%;
-    font-size: 8vw;
+    font-size: 28px;
     line-height: 1.1;
     letter-spacing: normal;
   }
   .donate__subtitle span {
-    font-size: 8.2vw;
+    font-size: 31px;
   }
   .donate__subtitle {
     margin-bottom: 25px;
     font-size: 20px;
     letter-spacing: normal;
+  }
+  .donate__info {
+    margin-bottom: 25px;
   }
   .donate__btn-block {
     display: -webkit-box;
@@ -2271,12 +2312,12 @@ body {
             justify-content: center;
   }
   .our-animals__title {
-    margin-bottom: 10px;
-    font-size: 8vw;
+    margin-bottom: -10px;
+    font-size: 28px;
   }
   .our-animals__slider {
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
   .slider-2__prev {
     -webkit-transform: translate(-30%, -100%);
@@ -2289,12 +2330,12 @@ body {
             transform: translate(30%, -100%) rotate(180deg);
   }
   .slider-2__btn {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     background: #358bee url("../svg/arrow-slider.svg") 45% 50%/50% 50% no-repeat;
   }
   .comment {
-    padding: 25px 35px 30px 35px;
+    padding: 25px 25px 25px 25px;
   }
   .comment__image {
     margin-bottom: 20px;
@@ -2309,7 +2350,7 @@ body {
     font-size: 13px;
   }
   .our-animals__container {
-    padding-bottom: 60px;
+    padding-bottom: 50px;
   }
   .join__row {
     display: block;
@@ -2320,9 +2361,11 @@ body {
   .join__form {
     padding: 30px 15px 30px 15px;
   }
+  .join__title {
+    margin-bottom: 15px;
+  }
   .join__input {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0px auto 15px auto;
     max-width: 290px;
   }
   .join__btn {
@@ -2338,9 +2381,13 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    text-align: center;
+  }
+  .footer__tels {
+    margin-bottom: 30px;
   }
   .footer__adresses {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     padding: 0;
   }
   .slider-1__btn {
@@ -2351,6 +2398,9 @@ body {
 }
 
 @media (max-width: 420px) {
+  .find__title {
+    font-size: 23px;
+  }
   .slider-1 {
     padding: 0;
   }
@@ -2363,5 +2413,31 @@ body {
     -webkit-transform: translate(30%, -100%) rotate(180deg);
         -ms-transform: translate(30%, -100%) rotate(180deg);
             transform: translate(30%, -100%) rotate(180deg);
+  }
+  .tabs__items {
+    margin-bottom: -25px;
+  }
+  .top-about__title {
+    font-size: 23px;
+  }
+  .top-about__text {
+    font-size: 17px;
+  }
+  .donate__title {
+    font-size: 23px;
+  }
+  .donate__subtitle span {
+    font-size: 24px;
+  }
+  .donate__subtitle {
+    margin-bottom: 15px;
+    font-size: 17px;
+  }
+  .our-animals__title {
+    font-size: 23px;
+  }
+  .slider-2__btn {
+    width: 50px;
+    height: 50px;
   }
 }

@@ -85,7 +85,7 @@ function images_dev() {
 		.pipe(browsersync.stream())
 }
 
-function images_build() {
+async function images_build() {
 	return src(path.src.img)
 		.pipe(tinypng({
 			key: 'wySvN73qbxdm3X5Lfq62lYYxwmrglfCb',

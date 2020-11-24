@@ -57,10 +57,9 @@ $(document).ready(function () {
 					slidesPerView: 2,
 				},
 				884: {
-					spaceBetween: 100,
 					slidesPerView: 2,
 				},
-				1090: {
+				1056: {
 					slidesPerView: 3,
 					spaceBetween: 31,
 				},
@@ -80,8 +79,6 @@ $(document).ready(function () {
 
 		slidesPerView: 2,
 		spaceBetween: 31,
-		// observer: true,
-		// observeParents: true,
 		loop: false,
 		navigation: {
 			nextEl: '.slider-2__next',
@@ -233,7 +230,7 @@ $(document).ready(function () {
 
 			// Создание вложенного макета содержимого балуна.
 			MyBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
-				' <a class="bln__close" href="#">×</a>' +
+				' <a class="bln__close" href="#"></a>' +
 				' <p class="bln__text">$[properties.balloonHeader]</p>' +
 				' <p class="bln__text">$[properties.balloonContent]</p>'
 			),
@@ -291,6 +288,6 @@ $(document).ready(function () {
 
 	});
 
-	$('.modal-tel').inputmask({ "mask": "+7 (999)-999-99-99" });
+	$('input[type="tel"]').inputmask({ "mask": "+7 (999)-999-99-99" });
 
 });
