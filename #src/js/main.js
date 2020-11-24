@@ -6,6 +6,8 @@ $(document).ready(function () {
 	const burger = $('.header__burger')
 	const slidersTabs = document.querySelectorAll('.slider-1__container')
 
+	const blnOffset = $(window).width() > '1200' ? [10, -175] : [10, -100]
+
 
 	const slider_hero = new Swiper('.slider-hero', {
 
@@ -241,7 +243,7 @@ $(document).ready(function () {
 				// Не скрываем иконку при открытом балуне.
 				hideIconOnBalloonOpen: false,
 				// И дополнительно смещаем балун, для открытия над иконкой.
-				balloonOffset: [10, -175]
+				balloonOffset: blnOffset
 			});
 		// Добавление метки на карту
 		myMap.geoObjects.add(myPlacemark);
