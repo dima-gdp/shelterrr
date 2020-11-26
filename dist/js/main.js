@@ -46,30 +46,16 @@ $(document).ready(function () {
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
-					spaceBetween: 25,
 				},
-				577: {
-					slidesPerView: 2,
-					spaceBetween: 25,
-				},
-				769: {
-					spaceBetween: 61,
+				653: {
 					slidesPerView: 2,
 				},
-				884: {
-					slidesPerView: 2,
-				},
-				1056: {
+				1130: {
 					slidesPerView: 3,
-					spaceBetween: 31,
-				},
-				1240: {
-					slidesPerView: 3,
-					spaceBetween: 61,
 				},
 				1340: {
 					slidesPerView: 4,
-					spaceBetween: 31,
+					spaceBetween: 30,
 				}
 			}
 		});
@@ -281,6 +267,17 @@ $(document).ready(function () {
 
 		$.fancybox.open({
 			src: '#modal',
+			touch: 'false',
+			smallBtn: false,
+			buttons: '',
+		});
+
+	});
+
+	$("#to-privacy").on('click', function () {
+
+		$.fancybox.open({
+			src: '#modal-polit',
 			touch: 'false',
 			smallBtn: false,
 			buttons: '',

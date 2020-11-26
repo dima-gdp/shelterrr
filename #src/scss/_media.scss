@@ -138,9 +138,9 @@
 		height: 60px;
 	}
 
-	.slider-1 {
-		padding: 0 28px;
-	}
+	// .slider-1 {
+	// 	padding: 0 28px;
+	// }
 	.donate__title {
 		font-size: 34px;
 		line-height: 1.2;
@@ -496,6 +496,17 @@
 }
 
 @media (max-width: 768px) {
+	.modal-container-polit {
+		padding: 40px 20px 20px 20px;
+	}
+	.title-modal-polit {
+		font-size: 23px;
+		line-height: 24px;
+	}
+	.modal-close-polit {
+		top: 9px;
+		right: 10px;
+	}
 	.header__tel {
 		display: none;
 	}
@@ -503,13 +514,8 @@
 		background: url("../img/ellipse-hero.svg") center bottom/contain no-repeat;
 	}
 
-	.slider-1__container {
-		margin: 0 -23px;
-		padding: 40px 23px;
-	}
-
 	.slider-1 .swiper-slide-active {
-		box-shadow: 5px 6px 23px rgba(53, 139, 238, 0.7);
+		box-shadow: 5px 6px 26px rgba(53, 139, 238, 0.7);
 	}
 
 	.slider-tabs__row {
@@ -623,6 +629,12 @@
 	}
 }
 
+@media (max-width: 653px) {
+	.slider-1 {
+		padding: 0 15%;
+	}
+}
+
 @media (max-width: 576px) {
 	.blue-btn {
 		min-height: 50px;
@@ -651,7 +663,7 @@
 		margin-right: 0;
 		width: 290px;
 		flex: 1 1 auto;
-		margin-bottom: 25px;
+		margin-bottom: 15px;
 		font-size: 13px;
 	}
 	.first__btn:last-child {
@@ -668,10 +680,6 @@
 	}
 	.modal__image {
 		display: none;
-	}
-
-	.slider-1 {
-		padding: 0 15%;
 	}
 
 	.slider-hero .swiper-pagination-bullets {
