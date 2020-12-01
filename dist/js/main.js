@@ -2,11 +2,32 @@ $(document).ready(function () {
 
 	objectFitImages();
 
-	const mobMenu = $('.mob-menu')
-	const burger = $('.header__burger')
-	const slidersTabs = document.querySelectorAll('.slider-1__container')
+	const mobMenu = $('.mob-menu');
+	const burger = $('.header__burger');
+	const slidersTabs = document.querySelectorAll('.slider-1__container');
 
-	const blnOffset = $(window).width() > '1200' ? [10, -175] : [10, -100]
+	const slidesTabs = $('.slider-tabs__item');
+
+	slidesTabs.each((function (i) {
+		let maxWidth;
+		console.log($(slidesTabs[i]).find('.slider-tabs__value').each(function (i) {
+
+		}))
+	}))
+
+
+	// var array_feedback_height   = [];
+
+	// for (var i = 0; i < $(".slider-catalog .unit-content-catalog").length; i++) {
+	// 	var unit_feedback_height  = $(".slider-catalog .unit-content-catalog:eq("+i+")").innerHeight();
+	// 	array_feedback_height.push(+unit_feedback_height);
+	// }
+	// var unit_feedback_max_height = Math.max.apply(null, array_feedback_height);
+	// $(".slider-catalog .unit-content-catalog").css({
+	// 	"min-height": unit_feedback_max_height,
+	// });
+
+	const blnOffset = $(window).width() > '1200' ? [10, -175] : [10, -100];
 
 
 	const slider_hero = new Swiper('.slider-hero', {
