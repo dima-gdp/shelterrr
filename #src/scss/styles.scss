@@ -280,6 +280,33 @@
 	&__nav {
 		flex: 1 1 auto;
 	}
+	&__search {
+		margin-bottom: 40px;
+		position: relative;
+	}
+	// .mob-menu__input
+	&__input {
+		width: 220px;
+		height: 34px;
+		padding: 5px 40px 5px 19px;
+		border-radius: 17px;
+		border: 1px solid #ffffff;
+		background-color: transparent;
+		color: #000000;
+		font-size: 14px;
+		line-height: 24px;
+		letter-spacing: 0.35px;
+	}
+	// .mob-menu__btn-searh
+	&__btn-searh {
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		width: 16px;
+		height: 16px;
+		transform: translateY(-50%);
+		background: url("../img/search-btn.svg") 0 0 / contain no-repeat;
+	}
 	// .mob-menu__tel
 	&__tel {
 		display: flex;
@@ -372,13 +399,16 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 242px;
+		width: 252px;
 		height: 56px;
 		padding: 10px;
-		box-shadow: 5px 6px 36px rgba(197, 139, 111, 0.44);
+		box-shadow: 5px 6px 40px rgba(197, 139, 111, 0.44);
 		border-radius: 28px;
 		background-color: #ffffff;
-		color: #0f3057;
+		text-transform: uppercase;
+		letter-spacing: 0.4px;
+		color: #002c58;
+		font-size: 16px;
 		font-weight: 700;
 		line-height: 28px;
 		transition: color 0.3s ease;
@@ -388,13 +418,51 @@
 			}
 		}
 	}
+	// .header__search
+	&__search {
+		margin-right: 20px;
+		position: relative;
+	}
+	// .header__input
+	&__input {
+		width: 184px;
+		height: 34px;
+		padding: 5px 40px 5px 19px;
+		border-radius: 17px;
+		border: 1px solid #ffffff;
+		background-color: transparent;
+		color: #000000;
+		font-size: 14px;
+		line-height: 24px;
+		letter-spacing: 0.35px;
+	}
+	// .header__btn-searh
+	&__btn-searh {
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		width: 16px;
+		height: 16px;
+		transform: translateY(-50%);
+		background: url("../img/search-btn.svg") 0 0 / contain no-repeat;
+	}
+	&--second {
+		background-color: #ffffff;
+		.header__tel {
+			box-shadow: 3px 3px 49px rgba(53, 139, 238, 0.4);
+		}
+		.header__input {
+			border: 1px solid #358bee;
+		}
+	}
 }
 .nav-header {
 	// .nav-header__top
 	&__top {
 		padding-bottom: 14px;
 		display: flex;
-		justify-content: flex-end;
+		justify-content: space-between;
+		align-items: center;
 		margin-right: 12px;
 	}
 	// .nav-header__bot
@@ -405,6 +473,7 @@
 	}
 }
 .top-nav {
+	display: flex;
 	// .top-nav__item
 	&__item {
 		&:not(:last-child) {
@@ -1288,6 +1357,118 @@
 		color: #edf2f8;
 		font-size: 14px;
 		letter-spacing: 0.35px;
+	}
+}
+
+// descr ==================================================================================================
+
+.descr {
+	padding-bottom: 115px;
+	// .descr__container
+	&__container {
+		display: flex;
+	}
+	// .descr__image
+	&__decor {
+		margin-right: -76px;
+		flex: 0 0 51%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__decor-cont {
+		position: relative;
+		width: 100%;
+	}
+	&__overlay--1,
+	&__overlay--2 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	&__overlay--1 {
+		animation: descr-decor 4s linear infinite;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 6%;
+			right: 14px;
+			width: 77px;
+			height: 77px;
+			background-color: #c6defa;
+			border-radius: 50%;
+		}
+	}
+	&__overlay--2 {
+		animation: descr-decor 6s linear infinite reverse;
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 1%;
+			right: -12px;
+			width: 229px;
+			height: 229px;
+			background-color: #c6defa;
+			border-radius: 50%;
+		}
+	}
+	&__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding-bottom: 100%;
+		margin-right: 11px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50% 50%;
+		position: relative;
+	}
+	// .descr__content
+	&__content {
+		padding-right: 70px;
+		color: #000000;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.4px;
+	}
+	// .descr__title
+	&__title {
+		margin-bottom: 54px;
+		font-size: 40px;
+		line-height: 1.66;
+	}
+	// .descr__text
+	&__text {
+		margin-bottom: 10px;
+		&--lh {
+			line-height: 2;
+		}
+	}
+	// .descr__subtitle-block
+	&__subtitle-block {
+		margin-top: 40px;
+	}
+	// .descr__subtitle
+	&__subtitle {
+		margin-bottom: 6px;
+		font-size: 18px;
+		font-weight: 700;
+		letter-spacing: 0.45px;
+		text-transform: uppercase;
+	}
+	// .descr__tels
+	&__tels {
+		li {
+			a {
+				color: #000000;
+				font-size: 16px;
+				letter-spacing: 0.4px;
+				line-height: 2;
+			}
+		}
 	}
 }
 
