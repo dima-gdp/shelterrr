@@ -1598,31 +1598,48 @@
 // contacts ================================================================================================
 
 .contacts {
+	padding-bottom: 56px;
 	// .contacts__container
 	&__container {
 	}
 	// .contacts__title
 	&__title {
-		margin-bottom: 40px;
+		margin-bottom: 27px;
 		line-height: 1.66;
-		font-size: 30px;
+		font-size: 40px;
+		letter-spacing: 1px;
 	}
 	// .contacts__list
 	&__list {
 		display: flex;
+		flex-wrap: wrap;
+		margin: 0px -57px 0px -57px;
 	}
 	// .contacts__column
 	&__column {
-		flex: 1 1 25%;
+		flex: 1 0 371px;
+		padding: 0px 57px 40px 57px;
 	}
 	// .contacts__item
 	&__item {
 		display: flex;
 		flex-direction: column;
+		height: 100%;
+	}
+	&__item-bot {
+		li {
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+		}
 	}
 	// .contacts__item-title
 	&__item-title {
-		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin-bottom: 27px;
+		min-height: 75px;
 		line-height: 1.2;
 		color: #8c9197;
 		font-size: 20px;
@@ -1630,8 +1647,7 @@
 
 		&::after {
 			content: "";
-			display: block;
-			margin-top: 20px;
+			margin-top: 23px;
 			width: 42px;
 			height: 4px;
 			background-color: #000000;
@@ -1643,14 +1659,17 @@
 		font-size: 20px;
 		font-weight: 700;
 		letter-spacing: 0.5px;
-		line-height: 2;
+		transition: color 0.3s;
+		&:hover {
+			color: #358bee;
+		}
 	}
 	// .contacts__text
 	&__text {
 		font-size: 16px;
 		font-weight: 400;
 		letter-spacing: 0.4px;
-		&--text--bold {
+		&--bold {
 			font-size: 20px;
 			font-weight: 700;
 		}
@@ -1658,14 +1677,17 @@
 
 	// .contacts__mail
 	&__mail {
-		/* Style for "dor.rich@g" */
 		width: 221px;
 		height: 21px;
-		color: #358bee;
+		color: #000;
 		font-size: 20px;
 		font-weight: 700;
 		text-decoration: underline;
 		letter-spacing: 0.5px;
+		transition: color 0.3s;
+		&:hover {
+			color: #358bee;
+		}
 	}
 }
 

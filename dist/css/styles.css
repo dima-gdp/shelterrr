@@ -2130,22 +2130,31 @@ body {
   }
 }
 
+.contacts {
+  padding-bottom: 56px;
+}
+
 .contacts__title {
-  margin-bottom: 40px;
+  margin-bottom: 27px;
   line-height: 1.66;
-  font-size: 30px;
+  font-size: 40px;
+  letter-spacing: 1px;
 }
 
 .contacts__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0px -57px 0px -57px;
 }
 
 .contacts__column {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 25%;
-          flex: 1 1 25%;
+      -ms-flex: 1 0 371px;
+          flex: 1 0 371px;
+  padding: 0px 57px 40px 57px;
 }
 
 .contacts__item {
@@ -2156,12 +2165,26 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100%;
+}
+
+.contacts__item-bot li:not(:last-child) {
+  margin-bottom: 15px;
 }
 
 .contacts__item-title {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 27px;
+  min-height: 75px;
   line-height: 1.2;
   color: #8c9197;
   font-size: 20px;
@@ -2170,8 +2193,7 @@ body {
 
 .contacts__item-title::after {
   content: "";
-  display: block;
-  margin-top: 20px;
+  margin-top: 23px;
   width: 42px;
   height: 4px;
   background-color: #000000;
@@ -2182,7 +2204,13 @@ body {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.5px;
-  line-height: 2;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.contacts__tels:hover {
+  color: #358bee;
 }
 
 .contacts__text {
@@ -2191,20 +2219,26 @@ body {
   letter-spacing: 0.4px;
 }
 
-.contacts__text--text--bold {
+.contacts__text--bold {
   font-size: 20px;
   font-weight: 700;
 }
 
 .contacts__mail {
-  /* Style for "dor.rich@g" */
   width: 221px;
   height: 21px;
-  color: #358bee;
+  color: #000;
   font-size: 20px;
   font-weight: 700;
   text-decoration: underline;
   letter-spacing: 0.5px;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.contacts__mail:hover {
+  color: #358bee;
 }
 
 @media (max-width: 1640px) {
@@ -2699,6 +2733,9 @@ body {
     font-size: 34px;
     margin-bottom: 80px;
   }
+  .contacts__title {
+    font-size: 34px;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
@@ -3142,6 +3179,9 @@ body {
   .news__title {
     font-size: 28px;
     margin-bottom: 80px;
+  }
+  .contacts__title {
+    font-size: 28px;
   }
   .news__item-overlay {
     width: 380px;
