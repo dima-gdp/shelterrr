@@ -25,7 +25,24 @@ $(document).ready(function () {
 		}))
 	}
 
-	widthSlider(activeTab)
+	function widthPetTable(sel) {
+		let maxWidth = 0;
+
+		sel.each(function (i, el) {
+			if ($(el).innerWidth() > maxWidth) {
+				maxWidth = $(el).innerWidth()
+			}
+		})
+
+		if (maxWidth) {
+			sel.css('width', `${maxWidth}px`)
+		}
+
+
+	}
+
+	widthPetTable($('.card-pet__value'));
+	widthSlider(activeTab);
 
 
 
