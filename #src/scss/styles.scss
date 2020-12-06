@@ -1691,6 +1691,231 @@
 	}
 }
 
+// Volunteer =======================================================================================
+
+.volunteer {
+	padding-bottom: 141px;
+	// .volunteer__container
+	&__container {
+	}
+	// .volunteer__title
+	&__title {
+		color: #0f3057;
+		font-size: 40px;
+		line-height: 1.66;
+		letter-spacing: 1px;
+	}
+	&__flex {
+		display: flex;
+	}
+	// .volunteer__content
+	&__content {
+		margin-right: 121px;
+		padding-top: 90px;
+	}
+	// .volunteer__form
+	&__form {
+		flex: 0 0 582px;
+		padding: 255px 15px 0px 15px;
+		position: relative;
+	}
+	// .form-vol__image
+	&__image {
+		position: absolute;
+		top: -25px;
+		left: 0;
+		padding-bottom: 68%;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		z-index: 1;
+		pointer-events: none;
+	}
+}
+
+.content-vol {
+	// .content-vol__head
+	&__head {
+		margin-bottom: 40px;
+		color: #000000;
+		font-size: 16px;
+		line-height: 24px;
+	}
+	// .content-vol__blocks
+	&__blocks {
+		margin-bottom: 37px;
+		li {
+			&:not(:last-child) {
+				margin-bottom: 22px;
+			}
+		}
+	}
+	// .content-vol__title
+	&__title {
+		margin-bottom: 10px;
+		font-size: 18px;
+		font-weight: 700;
+		letter-spacing: 0.45px;
+		text-transform: uppercase;
+		line-height: 1.3;
+	}
+	// .content-vol__subtitle
+	&__subtitle {
+		color: #000000;
+		font-size: 16px;
+		line-height: 24px;
+	}
+	// .content-vol__bot
+	&__bot {
+		font-size: 18px;
+		font-weight: 700;
+		letter-spacing: 0.45px;
+		text-transform: uppercase;
+		color: #0f3057;
+		line-height: 1.3;
+	}
+}
+.form-vol {
+	padding: 100px 53px 84px 53px;
+	box-shadow: 3px 3px 49px rgba(53, 139, 238, 0.4);
+	border-radius: 20px;
+	background-color: #ffffff;
+	position: relative;
+	// .form-vol__title
+	&__title {
+		margin-bottom: 28px;
+		font-size: 30px;
+		text-align: center;
+	}
+	// .form-vol__subtitle
+	&__subtitle {
+		margin-bottom: 43px;
+		color: #00000a;
+		font-size: 16px;
+		line-height: 24px;
+		text-align: center;
+		letter-spacing: 0.4px;
+	}
+	// .form-vol__input
+	&__input {
+		display: block;
+		width: 100%;
+		margin-bottom: 30px;
+		padding: 10px 30px 10px 15px;
+		height: 40px;
+		border-bottom: 1px solid #000;
+		color: #000000;
+		font-size: 16px;
+		&:focus {
+			border-color: #358bee;
+		}
+	}
+	// .form-vol__textarea
+	&__textarea {
+		display: block;
+		height: 176px;
+		width: 100%;
+		margin-bottom: 60px;
+		padding: 10px 30px 10px 15px;
+		display: block;
+		border-bottom: 1px solid #000;
+		border-right: 1px solid #000;
+		color: #000000;
+		font-size: 16px;
+		resize: none;
+	}
+	// .form-vol__btn
+	&__btn {
+		margin: 0 auto;
+		width: 270px;
+		font-size: 18px;
+	}
+}
+
+// reviews ===================================================================================================
+
+.reviews {
+	padding-bottom: 100px;
+	// .reviews__container
+	&__container {
+	}
+	// .reviews__container
+	&__subcontainer {
+		max-width: 903px;
+	}
+	// .reviews__gal
+	&__gal {
+		margin-bottom: 55px;
+	}
+	// .reviews__title
+	&__title {
+		margin-bottom: 20px;
+		font-size: 30px;
+		font-weight: 600;
+		letter-spacing: 0.75px;
+		line-height: 1.5;
+	}
+	// .reviews__subtitle
+	&__subtitle {
+		margin-bottom: 40px;
+		color: #000000;
+		font-size: 20px;
+		letter-spacing: 0.5px;
+		line-height: 1.5;
+	}
+	// .reviews__control
+	&__control {
+		display: flex;
+		align-items: center;
+		padding-top: 20px;
+		border-top: 1px solid #c3c8cf;
+	}
+	// .reviews__btn
+	&__btn {
+		color: #0f3057;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 30px;
+		text-transform: uppercase;
+		background-color: transparent;
+		transition: color 0.3s;
+		&--prev {
+			margin-right: auto;
+		}
+		&--next {
+			margin-left: auto;
+		}
+		&:hover {
+			color: #358bee;
+		}
+	}
+}
+
+.gal {
+	display: grid;
+	grid-template-columns: 437px 204px 204px;
+	grid-template-rows: 227px 227px;
+	grid-gap: 29px;
+	// .gal__item
+	&__item {
+		position: relative;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			font-family: "object-fit: cover; object-position: center;";
+		}
+		&--b {
+			grid-row-start: span 2;
+		}
+	}
+}
+
 //media ====================================================================================================
 
 @import "_media.scss";
