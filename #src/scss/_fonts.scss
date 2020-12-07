@@ -16,6 +16,7 @@
 }
 
 @include font(Montserrat, fonts/Montserrat-Regular, 400, normal);
+@include font(Montserrat, fonts/Montserrat-Medium, 500, normal);
 @include font(Montserrat, fonts/Montserrat-Bold, 700, normal);
 @include font(Montserrat, fonts/Montserrat-ExtraBold, 800, normal);
 @include font(Montserrat, fonts/Montserrat-SemiBold, 600, normal);

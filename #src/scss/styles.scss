@@ -1677,8 +1677,6 @@
 
 	// .contacts__mail
 	&__mail {
-		width: 221px;
-		height: 21px;
 		color: #000;
 		font-size: 20px;
 		font-weight: 700;
@@ -1875,7 +1873,7 @@
 	&__btn {
 		color: #0f3057;
 		font-size: 16px;
-		font-weight: 600;
+		font-weight: 500;
 		line-height: 30px;
 		text-transform: uppercase;
 		background-color: transparent;
@@ -1894,8 +1892,9 @@
 
 .gal {
 	display: grid;
-	grid-template-columns: 437px 204px 204px;
+	grid-template-columns: repeat(auto-fill, minmax(204px, 1fr));
 	grid-template-rows: 227px 227px;
+	grid-auto-rows: 227px;
 	grid-gap: 29px;
 	// .gal__item
 	&__item {
@@ -1911,8 +1910,24 @@
 			font-family: "object-fit: cover; object-position: center;";
 		}
 		&--b {
+			grid-column-start: span 2;
 			grid-row-start: span 2;
 		}
+	}
+	&__count {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 1;
+		color: #ffffff;
+		font-size: 36px;
+		letter-spacing: 0.9px;
+		background-color: rgba(15, 48, 87, 0.7);
 	}
 }
 
@@ -1923,6 +1938,7 @@
 	// .pet__container
 	&__container {
 		display: flex;
+		align-items: flex-start;
 	}
 	// .pet__content
 	&__content {
@@ -1931,8 +1947,9 @@
 	// .pet__gal
 	&__gal {
 		display: grid;
-		grid-template-columns: 438px 203px 203px;
+		grid-template-columns: repeat(auto-fill, minmax(203px, 1fr));
 		grid-template-rows: 273px 273px;
+		grid-auto-rows: 273px;
 		grid-column-gap: 30px;
 		grid-row-gap: 26px;
 		margin-bottom: 65px;
@@ -1940,11 +1957,32 @@
 	// .pet__gal
 	&__image {
 		position: relative;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
 		&--r2 {
 			grid-row-start: span 2;
+			grid-column-start: span 2;
 		}
 		&--c2 {
 			grid-column-start: span 2;
+			&::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 108px;
+				height: 108px;
+				border-radius: 50%;
+				background: rgba(255, 255, 255, 0.4) url("../img/pet-play.svg") 60% 50% no-repeat;
+			}
 		}
 	}
 	// .pet__under-gal
@@ -2043,6 +2081,7 @@
 	&__contacts {
 		padding-left: 60px;
 		margin-bottom: 52px;
+		min-height: 40px;
 		background: url("../img/pet-adress.png") 0 0 / 40px 40px no-repeat;
 	}
 	// .card-pet__adress
@@ -2084,13 +2123,16 @@
 
 .pets {
 	padding-bottom: 120px;
+	.tabs__items {
+		margin-bottom: 30px;
+	}
 }
 
 .tabs__container {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin: 0 -30px;
+	margin: 0 -15px;
 
 	li {
 		flex: 0 0 350px;
@@ -2101,12 +2143,19 @@
 // Comments ===================================================================
 
 .comments {
+	&__title {
+		font-size: 40px;
+		line-height: 1.66;
+		letter-spacing: 1px;
+		margin-bottom: 56px;
+	}
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
-		margin: 0 -30px;
+		margin: 0 -15px;
+		margin-bottom: 80px;
 		li {
-			flex: 1 0 620px;
+			flex: 1 0 480px;
 			padding: 0px 15px 33px 15px;
 		}
 	}
