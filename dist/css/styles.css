@@ -561,7 +561,6 @@ body {
       -ms-flex-pack: start;
           justify-content: flex-start;
   padding: 50px 15px 30px 15px;
-  border-radius: 20px 0 0 20px;
   z-index: 888;
   background: #f5ccb8;
   width: 320px;
@@ -2481,6 +2480,10 @@ body {
   grid-row-start: span 2;
 }
 
+.gal__item--hide {
+  display: none;
+}
+
 .gal__count {
   position: absolute;
   top: 0;
@@ -2725,11 +2728,24 @@ body {
   margin: 0 -15px;
 }
 
-.tabs__container li {
+.tabs__card {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 350px;
           flex: 0 0 350px;
   padding: 0px 15px 32px 15px;
+}
+
+.tabs__card--help {
+  overflow: hidden !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  max-height: 0 !important;
+  min-height: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .comments__title {
@@ -2749,7 +2765,7 @@ body {
   margin-bottom: 80px;
 }
 
-.comments__list li {
+.comments__item {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 480px;
           flex: 1 0 480px;
@@ -2796,6 +2812,15 @@ body {
     -webkit-transform: translate(0, -50%) rotate(180deg);
         -ms-transform: translate(0, -50%) rotate(180deg);
             transform: translate(0, -50%) rotate(180deg);
+  }
+}
+
+@media (max-width: 1430px) {
+  .pet__gal {
+    grid-template-columns: repeat(2, minmax(203px, 1fr));
+  }
+  .pet__image--r2 {
+    grid-row-start: auto;
   }
 }
 
@@ -3119,6 +3144,24 @@ body {
   .pets {
     padding-bottom: 70px;
   }
+  .pets .slider-tabs__name {
+    padding: 0px 20px 0px 20px;
+  }
+  .pets .slider-tabs__row {
+    margin: 0px 20px 0px 20px;
+  }
+  .pets .slider-tabs__value {
+    font-size: 12px;
+  }
+  .pets .slider-tabs__key {
+    font-size: 12px;
+  }
+  .tabs__card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 250px;
+            flex: 1 0 250px;
+    padding: 0px 15px 32px 15px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -3353,8 +3396,11 @@ body {
   }
   .volunteer__form {
     margin: 0 auto;
-    max-width: 460px;
+    max-width: 530px;
     padding: 225px 15px 0px 15px;
+  }
+  .form-vol {
+    padding: 105px 30px 84px 30px;
   }
   .volunteer {
     padding-bottom: 100px;
@@ -3368,7 +3414,7 @@ body {
   .card-pet {
     margin: 0px auto 40px auto;
     padding: 37px 44px 50px 44px;
-    max-width: 500px;
+    width: 100%;
   }
   .pet {
     padding-bottom: 70px;
@@ -3397,7 +3443,7 @@ body {
   .pet__content {
     margin-right: 0;
   }
-  .comments__list li {
+  .comments__item {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 368px;
             flex: 1 0 368px;
@@ -3407,6 +3453,15 @@ body {
   }
   .pets {
     padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 964px) {
+  .gal {
+    grid-template-columns: repeat(3, minmax(204px, 1fr));
+  }
+  .gal__item--b {
+    grid-row-start: auto;
   }
 }
 
@@ -3656,6 +3711,15 @@ body {
   }
   .volunteer {
     padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 709px) {
+  .gal {
+    grid-template-columns: repeat(auto-fill, minmax(204px, 1fr));
+  }
+  .gal__item--b {
+    grid-row-start: span 2;
   }
 }
 
@@ -3931,9 +3995,8 @@ body {
   .news {
     padding-bottom: 70px;
   }
-  .gal__item--b {
-    grid-column-start: auto;
-    grid-row-start: auto;
+  .gal {
+    grid-gap: 15px;
   }
   .reviews__title {
     line-height: 1.2;
@@ -4016,8 +4079,10 @@ body {
   .card-pet__donate {
     font-size: 17px;
   }
+  .pet__gal {
+    grid-template-columns: repeat(auto-fill, minmax(203px, 1fr));
+  }
   .pet__image--r2 {
-    grid-row-start: auto;
     grid-column-start: auto;
   }
   .pet__image--c2 {
@@ -4035,6 +4100,15 @@ body {
   }
   .comments__list {
     margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 465px) {
+  .gal {
+    grid-template-columns: minmax(204px, 1fr);
+  }
+  .gal__item--b {
+    grid-column-start: auto;
   }
 }
 
@@ -4274,14 +4348,17 @@ body {
   .pet__gal {
     margin-bottom: 25px;
   }
-  .comments__list li {
+  .comments__item {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 310px;
             flex: 1 0 310px;
   }
-  .tabs__container li {
+  .tabs__card {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 280px;
             flex: 1 0 280px;
+  }
+  .comment {
+    padding: 20px 15px 20px 15px;
   }
 }
