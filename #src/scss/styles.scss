@@ -819,6 +819,7 @@
 		color: #000000;
 		font-size: 14px;
 		letter-spacing: 0.35px;
+		line-height: 1.1;
 	}
 	// .slider-tabs__value
 	&__value {
@@ -826,6 +827,8 @@
 		font-size: 14px;
 		font-weight: 600;
 		letter-spacing: 0.35px;
+		line-height: 1.1;
+		max-width: 50%;
 	}
 }
 
@@ -1388,7 +1391,7 @@
 		height: 100%;
 	}
 	&__overlay--1 {
-		animation: descr-decor 4s linear infinite;
+		animation: descr-decor 16s linear infinite;
 		&::before {
 			content: "";
 			position: absolute;
@@ -1401,7 +1404,7 @@
 		}
 	}
 	&__overlay--2 {
-		animation: descr-decor 6s linear infinite reverse;
+		animation: descr-decor 24s linear infinite reverse;
 		&::after {
 			content: "";
 			position: absolute;
@@ -2128,6 +2131,9 @@
 	.tabs__items {
 		margin-bottom: 30px;
 	}
+	.slider-tabs__item {
+		height: 100%;
+	}
 }
 
 .tabs__container {
@@ -2138,6 +2144,7 @@
 }
 .tabs__card {
 	flex: 0 0 350px;
+	max-width: 350px;
 	padding: 0px 15px 32px 15px;
 	&--help {
 		overflow: hidden !important;
@@ -2171,6 +2178,9 @@
 	&__item {
 		flex: 1 0 480px;
 		padding: 0px 15px 33px 15px;
+		.comment {
+			height: 100%;
+		}
 	}
 }
 

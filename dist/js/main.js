@@ -38,7 +38,6 @@ $(document).ready(function () {
 			sel.css('width', `${maxWidth}px`)
 		}
 
-
 	}
 
 	widthPetTable($('.card-pet__value'));
@@ -129,7 +128,13 @@ $(document).ready(function () {
 	});
 
 
-	$('ul.tabs__items').on('click', 'li:not(.active)', function () {
+	$('.find .tabs__items').on('click', 'li:not(.active)', function () {
+		$(this).addClass('active').siblings().removeClass('active')
+			.closest('div.tabs').find('div.tabs__block').removeClass('active').eq($(this).index()).addClass('active');
+		widthSlider($(this).closest('div.tabs').find('.tabs__block.active'))
+	})
+
+	$('.pets .tabs__items').on('click', 'li:not(.active)', function () {
 		$(this).addClass('active').siblings().removeClass('active')
 			.closest('div.tabs').find('div.tabs__block').removeClass('active').eq($(this).index()).addClass('active');
 		widthSlider($(this).closest('div.tabs').find('.tabs__block.active'))
