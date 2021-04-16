@@ -728,6 +728,7 @@
 @media (max-width: 964px) {
 	.gal {
 		grid-template-columns: repeat(3, minmax(204px, 1fr));
+		// grid-template-rows: 227px;
 	}
 	.gal__item--b {
 		grid-row-start: auto;
